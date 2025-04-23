@@ -14,13 +14,6 @@ public class Entrada {
         // Crear la biblioteca
         Biblioteca biblioteca = new Biblioteca("Biblioteca Municipal de Alcorcón", "Av. de Leganés", 31, 100);
 
-        // He creado los libros desde el inicio y luego se pueden crear también
-        Terror terror = new Terror("IT", "Stephen King", 100, 1234, "terror", "Alto");
-        Comedia comedia = new Comedia("Rebelión en la granja", "George Orwell", 200, 3456, "Comedia", "Divertida");
-        Policiaca policiaca = new Policiaca("Las aventuras de Sherlock Holmes", "Arthur Connan Doyle", 500, 7891, "Policiaca", "Investigación de un crimen", "Sherlock Holmes");
-
-
-
         // Bienvenida al principio
         System.out.println("Bienvenidos a la Biblioteca:");
 
@@ -84,10 +77,10 @@ public class Entrada {
                                 Comedia nuevoComedia = new Comedia(titulo, autor, numeroPaginas, isbn, categoria, tipoDeHumor);
                                 biblioteca.agregarLibro(nuevoComedia);
                             } else if (categoria.equalsIgnoreCase("Policiaca")) {
-                                System.out.print("Introduce la trama (por ejemplo: 'Investigación de un crimen'): ");
+                                System.out.print("Introduce la trama: ");
                                 trama = teclado.nextLine();
 
-                                System.out.print("Introduce el personaje principal (por ejemplo: 'Detective Sherlock Holmes'): ");
+                                System.out.print("Introduce el personaje principal: ");
                                 personaje = teclado.nextLine();
 
                                 Policiaca nuevoPoliciaca = new Policiaca(titulo, autor, numeroPaginas, isbn, categoria, trama, personaje);
